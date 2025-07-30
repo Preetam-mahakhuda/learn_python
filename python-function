@@ -1,0 +1,23 @@
+# 1. Take a number as input & check it is even or not
+
+# 1. Summation of two numbers
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+sum = num1 + num2
+
+print("The summation of the two numbers is: ",sum)
+
+# Hence using Python function.
+
+def sum ():
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    
+    summation =  num1 + num2
+    return summation
+
+result = sum()
+
+print(f"The summation of the two numbers is: {result}")
