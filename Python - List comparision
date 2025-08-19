@@ -1,0 +1,29 @@
+
+# Traditional python list
+list1 = [10, -2, 20, -40, 50]
+for i in list1:
+    print('the no is: ', i)
+
+# List comparision in python
+list2 = [10, -2, 30, 40, -20]
+hello = [print('the no is: ', list2) for i in list2]
+
+#example - 2
+doubles = [x * 2 for x in range(1, 11)]
+triples = [y * 3 for y in range(1, 11)]
+squares = [z * z for z in range(1, 11)]
+
+#example - 3
+fruits = ["apple", "orange", "banana", "coconut"]
+uppercase_words = [fruit.upper() for fruit in fruits]
+fruit_chars = [fruit[0] for fruit in fruits]
+print(uppercase_words, fruit_chars)
+
+#example - 4
+numbers = [-2, 0, -3, 10, 99, -6]
+positive_numbers = [i for i in numbers if i >= 0]
+print(positive_numbers)
+
+numbers = [-2, 0, -3, 10, 99, -6]
+negative = [i for i in numbers if i <= 0]
+print(negative_numbers)
