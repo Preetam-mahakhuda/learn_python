@@ -27,3 +27,17 @@ print(positive_numbers)
 numbers = [-2, 0, -3, 10, 99, -6]
 negative = [i for i in numbers if i <= 0]
 print(negative_numbers)
+
+numbers = [-2, 0, -3, 10, 99, -6, 8]
+even_num = [i for i in numbers if i % 2 == 0]
+print(even_num)
+
+numbers = [-2, 0, -3, 10, 99, -6, 8]
+odd_num = [i for i in numbers if i % 2 == 1]
+print(odd_num)
+
+#example - 5
+grades = [85, 90, 25, 35, 40, 70]
+passing_grades = [i for i in grades if i >= 33]
+
+print(passing_grades)
