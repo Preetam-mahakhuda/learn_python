@@ -1,1 +1,11 @@
-
+try:
+    number = int(input("Enter a number: "))
+    print(1 / number)
+except ZeroDivisionError:
+    print("You can't divide with zero")
+except NameError:
+    print("Enter only numbers plzz")
+except Exception:
+    print("Something went wrong!")
+finally:
+    print("Do some clean up here")
