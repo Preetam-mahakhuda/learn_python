@@ -1,1 +1,20 @@
+🚀 Basic Join Questions (INNER, LEFT)
+These questions focus on retrieving combined data using the most common join types.
 
+1. INNER JOIN: List the name of every employee along with the name of the department they work in. (This is the most common use case for an INNER JOIN).
+2.LEFT JOIN (A): List every department name and, if they exist, the names of the employees who work in that department. Include departments that currently have no employees.
+3.LEFT JOIN (B) & Filtering: Find the names of employees who belong to the 'Sales' department and their respective salaries.
+
+🎯 Advanced Join Questions (RIGHT, FULL, Self-Join)
+These introduce less common joins or require joining a table to itself.
+
+2.RIGHT JOIN: List the name of every employee and their department's location. Use a RIGHT JOIN to ensure you list all employees, even if a department ID is somehow missing in the Departments table (though this is less common than a LEFT JOIN).
+3.FULL OUTER JOIN (Conceptual): List all employee names and all department names. If an employee doesn't have a department, show a NULL for the department name. If a department has no employees, show a NULL for the employee name. (Note: Not all SQL systems support FULL OUTER JOIN).
+4.Multiple Joins & Aggregation: Calculate the average salary for each department. List the DepartmentName and the calculated Average Salary, ordering the result from highest to lowest average salary.
+
+🔑 Filtering and Analysis Questions
+
+1.These questions require joins plus filtering (WHERE) or grouping/aggregation (GROUP BY).
+2.Filtering & Join: Find the names of all employees who earn more than $60,000 and the name of their department.
+3.JOIN & Finding Unmatched Data: Identify departments that currently have no employees. List only the DepartmentName. (Requires a LEFT JOIN and a check for NULL employee IDs).
+4.JOIN & Subquery/CTE: Find the department with the highest average salary. (Requires calculating average salary per department and then finding the maximum).
