@@ -28,3 +28,33 @@ create database Book_store;
 use Book_store;
 
 show tables;
+
+-- 01) Retrieve all books in the "Fiction" genre
+select * 
+from books
+where genre = "Fiction";
+
+-- 02) Find books published after the year 1950
+select * 
+from books
+where Published_Year >= 1950;
+
+-- 03) List all customers from the Canada
+select *
+from customers
+where city = 'canada';
+
+-- 04) Show orders placed in November 2023
+select *
+from orders
+where order_date >= '2023-11-01'
+and order_date < '2023-12-01';
+
+-- 05) Retrieve the total stock of books available
+select sum(Quantity) as total_stock
+from orders;
+
+-- 06) Find the details of the most expensive book
+select *
+from books
+where price = (select max(price) from books);
