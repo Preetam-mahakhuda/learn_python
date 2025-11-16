@@ -95,3 +95,22 @@ GROUP BY o.Book_ID , o.Quantity;
 
 select count(order_id)
 from orders;
+
+-- Advanced Queries
+-- 01) Retrieve the total number of books sold for each genre
+SELECT b.genre, SUM(o.quantity) AS total_books_sold
+FROM Orders o
+JOIN Books b ON o.book_id = b.book_id
+GROUP BY b.genre;
+
+-- 02) Find the average price of books in the "Fantasy" genre
+SELECT AVG(price) AS avg_price
+FROM Books
+WHERE genre = 'Fantasy';
+
+-- 03) List customers who have placed at least 2 orders
+select customer_id, count(order_id) as total_orders
+from orders
+group by customer_id
+having count(order_id) >= 2;
+
