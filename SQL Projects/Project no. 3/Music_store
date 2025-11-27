@@ -35,3 +35,26 @@ number of purchases is shared return all Genres
 country. Write a query that returns the country along with the top customer and how 
 much they spent. For countries where the top amount spent is shared, provide all 
 customers who spent this amount 
+
+-- Solutions
+-- Easy
+-- 1. Who is the senior most employee based on job title?
+select *
+from employee
+order by birthdate asc
+limit 1;
+-- or
+select *
+from employee
+where birthdate <= (select min(birthdate) from employee); 
+
+-- 2. Which countries have the most Invoices?
+select *
+from invoice
+where billing_country >= (select max(billing_country)from invoice);
+
+-- 3. What are top 3 values of total invoice?
+select *
+from invoice
+order by total desc
+limit 3;
